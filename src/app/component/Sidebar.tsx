@@ -18,7 +18,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
     <div
       className={`${
         isOpen ? "block" : "hidden"
-      } min-h-screen w-64 bg-dark-blue rounded-r-full text-white p-4 flex flex-col justify-center items-center`}
+      } min-h-screen w-64 bg-gradient-to-r from-light-blue to-blue-500  rounded-r-full text-white p-4 flex flex-col justify-center items-center`}
     >
       <h1 className="text-2xl font-bold mb-12 text-center ">Student Portal</h1>
       <nav className="space-y-4 flex flex-col text-center font-bold ">
