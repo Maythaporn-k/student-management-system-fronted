@@ -366,7 +366,7 @@ const StudentData: React.FC = () => {
           </DialogContent>
           <DialogActions>
             <Button
-              sx={{ color: "#ffffff" }}
+              sx={{ color: "#000000" }}
               onClick={() => {
                 setIsEditModalOpen(false);
                 setFormError(null);
