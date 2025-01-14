@@ -1,5 +1,5 @@
 import AxiosInstance from "@/app/service/axiosInstance";
-import { DeleteStudent, InsertStudent, StudentList } from "./type";
+import { DeleteStudent, EditStudent, InsertStudent, StudentList } from "./type";
 import { API_Paths } from "@/utils/enum";
 
 const Service = {
@@ -8,8 +8,10 @@ const Service = {
     AxiosInstance.post<InsertStudent>(API_Paths.STUDENT_CREATE, studentData),
   deleteStudent: (studentId: DeleteStudent) =>
     AxiosInstance.delete<DeleteStudent>(API_Paths.STUDENT_DELETE, {
-      data: studentId, // Axios expects the data in the 'data' field for DELETE requests
+      data: studentId,
     }),
+  updateStudent: (studentData: EditStudent) =>
+    AxiosInstance.put<EditStudent>(API_Paths.STUDENT_UPDATE, studentData),
 };
 
 export default Service;

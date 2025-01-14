@@ -1,5 +1,4 @@
-"use client";
-
+//TODO : layout.tsx (feature)
 export default function DashboardLayout({
   children,
 }: {

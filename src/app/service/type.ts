@@ -9,11 +9,19 @@ type StudentList = {
 
 type InsertStudent = {
   name: string;
-  age: number;
+  age: number | undefined;
   grade: string;
 };
 
 type DeleteStudent = {
   id: number;
 };
-export type { StudentList, InsertStudent, DeleteStudent };
+
+type EditStudent = {
+  id: number;
+  name: string;
+  age: number;
+  grade: string;
+  attendance: boolean;
+};
+export type { StudentList, InsertStudent, DeleteStudent, EditStudent };

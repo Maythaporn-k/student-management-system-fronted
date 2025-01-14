@@ -1,3 +1,5 @@
+//TODO : page.tsx (main)
+
 import { redirect } from "next/navigation";
 import { Paths } from "@/utils/enum";
 

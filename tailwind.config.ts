@@ -15,6 +15,7 @@ export default {
         "light-blue": "#40A2D8",
         "light-cream": "#F0EDCF",
         "gray-black": "#2A3335",
+        red: "#FF0000",
         success: "#5CB338",
         error: "#FB4141",
       },
