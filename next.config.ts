@@ -1,11 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  productionBrowserSourceMaps: false,
+  reactStrictMode: true,
+  devIndicators: {
+    buildActivity: false,
+  },
   async rewrites() {
     return [
       {
-        source: "/orch/:path*", // This will match any requests starting with /orch/
-        destination: "http://localhost:3001/orch/:path*", // Proxy the request to your backend
+        source: "/orch/:path*",
+        destination: "http://localhost:3001/orch/:path*",
       },
     ];
   },

@@ -5,6 +5,11 @@ type StudentList = {
   grade: string;
   email: string;
   attendance: boolean;
+  message?: string;
+};
+
+type ResponseMessage = {
+  message: string;
 };
 
 type InsertStudent = {
@@ -24,4 +29,10 @@ type EditStudent = {
   grade: string;
   attendance: boolean;
 };
-export type { StudentList, InsertStudent, DeleteStudent, EditStudent };
+export type {
+  StudentList,
+  InsertStudent,
+  DeleteStudent,
+  EditStudent,
+  ResponseMessage,
+};
