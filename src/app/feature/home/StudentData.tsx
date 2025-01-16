@@ -48,7 +48,7 @@ const StudentData: React.FC = () => {
 
   const [formData, setFormData] = useState<InsertStudent>({
     name: "",
-    age: undefined,
+    age: null,
     grade: "",
   });
 
@@ -58,6 +58,14 @@ const StudentData: React.FC = () => {
   const [attendance, setAttendance] = useState<boolean | null>(null);
 
   const [deleteId, setDeleteId] = useState<number | null>(null);
+
+  const clearFormData = () => {
+    setFormData({
+      name: "",
+      age: null,
+      grade: "",
+    });
+  };
 
   //TODO: fetch list
   const fetchStudents = async () => {
@@ -105,6 +113,7 @@ const StudentData: React.FC = () => {
       setIsLoading(false);
       setIsInsertModalOpen(false);
       setSnackBarOpen(true);
+      clearFormData();
       fetchStudents();
     }
   };
@@ -262,10 +271,17 @@ const StudentData: React.FC = () => {
         <br />
         <DataGrid
           rows={students}
+          pageSizeOptions={[5, 10, 20]}
           columns={columns}
           disableColumnMenu
           loading={isLoading}
           slots={{ toolbar: CustomToolbar }}
+          pagination
+          initialState={{
+            pagination: {
+              paginationModel: { pageSize: 5, page: 0 },
+            },
+          }}
         />
         {/* Insert Dialog */}
         <Dialog
@@ -285,7 +301,7 @@ const StudentData: React.FC = () => {
             <TextField
               label="Age"
               type="number"
-              value={formData.age}
+              value={formData.age === null ? "" : formData.age}
               onChange={(e) => handleFormChange("age", Number(e.target.value))}
               fullWidth
               margin="dense"

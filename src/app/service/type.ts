@@ -9,7 +9,7 @@ type StudentList = {
 
 type InsertStudent = {
   name: string;
-  age: number | undefined;
+  age: number | null;
   grade: string;
 };
 
