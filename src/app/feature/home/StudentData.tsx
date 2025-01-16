@@ -105,7 +105,7 @@ const StudentData: React.FC = () => {
     try {
       await Service.insertStudent(formData);
       setErrorMessage("Insert Success");
-      // fetchStudents();
+      fetchStudents();
     } catch (error) {
       console.error("Error inserting student:", error);
       setErrorMessage("Failed to insert student. Please try again.");
@@ -114,7 +114,6 @@ const StudentData: React.FC = () => {
       setIsInsertModalOpen(false);
       setSnackBarOpen(true);
       clearFormData();
-      fetchStudents();
     }
   };
 
@@ -137,7 +136,7 @@ const StudentData: React.FC = () => {
         attendance: attendance ?? selectedStudent.attendance,
       });
       setErrorMessage("Edit Success");
-      // fetchStudents();
+      fetchStudents();
     } catch (error) {
       console.error("Error editing student:", error);
       setErrorMessage("Failed to edit student. Please try again.");
@@ -145,7 +144,6 @@ const StudentData: React.FC = () => {
       setIsLoading(false);
       setIsEditModalOpen(false);
       setSnackBarOpen(true);
-      fetchStudents();
     }
   };
 
@@ -157,7 +155,7 @@ const StudentData: React.FC = () => {
     try {
       await Service.deleteStudent({ id: deleteId });
       setErrorMessage("Delete Success");
-      // fetchStudents();
+      fetchStudents();
     } catch (error) {
       console.error("Error deleting student:", error);
       setErrorMessage("Failed to delete student. Please try again.");
@@ -165,7 +163,6 @@ const StudentData: React.FC = () => {
       setIsLoading(false);
       setIsDeleteModalOpen(false);
       setSnackBarOpen(true);
-      fetchStudents();
     }
   };
 
