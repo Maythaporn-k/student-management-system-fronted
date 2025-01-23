@@ -309,7 +309,7 @@ const StudentData: React.FC = () => {
   );
 
   return (
-    <div className="flex justify-center mt-8 mb-8 max-h-fit">
+    <div className="flex justify-center mb-4  max-h-fit">
       <div className="w-4/5  h-[600px ]overflow-auto">
         {isError && <Alert severity="error">Error fetching data!</Alert>}
         {snackBarOpen && message && (
