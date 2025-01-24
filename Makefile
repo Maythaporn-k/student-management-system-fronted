@@ -1,5 +1,5 @@
 local:
-	yarn dev:local
+	yarn local
 
 dev:
 	yarn dev

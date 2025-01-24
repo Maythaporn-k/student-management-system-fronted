@@ -2,8 +2,7 @@ import axios from "axios";
 
 //TODO: AxiosInstance
 const AxiosInstance = axios.create({
-  baseURL:
-    "https://maythaporn-k.github.io/student-management-system-backend-orch/", // your API base URL
+  baseURL: "https://student-management-448804.el.r.appspot.com", // your API base URL
   headers: {
     "Content-Type": "application/json",
   },
