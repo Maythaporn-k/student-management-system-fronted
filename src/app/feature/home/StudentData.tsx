@@ -34,7 +34,7 @@ import AlertModal from "@/app/component/AlertModal";
 import axios from "axios";
 
 const StudentData: React.FC = () => {
-  let isLoading;
+  let isLoading = true;
   const [isError, setIsError] = useState(false);
 
   //TODO:disabled validate next line
