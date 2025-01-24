@@ -39,4 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Ignore the axiosInstance.ts file
+src/app/service/axiosInstance.ts
+
 .codegpt
